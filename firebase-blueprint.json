@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "allowed_users": {
+      "title": "Allowed Users",
+      "description": "List of users permitted to access the application and their roles and in-game names",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "format": "email" },
+        "role": { "type": "string", "enum": ["admin", "leader", "member"] },
+        "inGameName": { "type": "string", "description": "Character or In-Game Name (IGN)" },
+        "addedBy": { "type": "string" },
+        "addedAt": { "type": "string" },
+        "updatedBy": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" }
+      },
+      "required": ["email", "role"]
+    },
+    "access_requests": {
+      "title": "Access Requests",
+      "description": "Pending and reviewed access requests from users logging in with Google",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "inGameName": { "type": "string", "description": "In-Game Name provided upon request" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "requestedAt": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "reviewedBy": { "type": "string" },
+        "reviewedAt": { "type": "string" }
+      },
+      "required": ["email", "status"]
+    }
+  }
+}

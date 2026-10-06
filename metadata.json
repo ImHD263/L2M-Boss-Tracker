@@ -1,0 +1,6 @@
+{
+  "name": "Boss Timer & Schedule Tracker",
+  "description": "Visual Boss spawn timer and schedule tracker integrated with Google Sheets, 24/7 background auto-recalculation daemon, Horizontal Table and Score Card views, English/Vietnamese language toggle, and Light/Dark theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
